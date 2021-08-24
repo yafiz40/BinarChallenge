@@ -18,6 +18,13 @@ class RockPaperScissors(gameName: String): Game(), IGame {
         this.gameName = gameName
     }
 
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            RockPaperScissors("Gunting Batu Kertas").startGame()
+        }
+    }
+
     override fun startGame() {
         intro()
         inputPlayerName()
