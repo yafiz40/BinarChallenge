@@ -27,6 +27,7 @@ class RockPaperScissors(gameName: String): Game(), IGame {
                 print("Ingin bermain lagi (Y/N)? "); isAgain = readLine()?.uppercase()
             }  while (isAgain.equals("Y").not() && isAgain.equals("N").not())
         } while (isAgain.equals("Y"))
+        outro()
     }
 
     private fun inputPlayerName() {
@@ -91,6 +92,12 @@ class RockPaperScissors(gameName: String): Game(), IGame {
                 }
             }
         }
+    }
+
+    override fun outro() {
+        println("==========================")
+        println("Terima kasih sudah bermain")
+        println("==========================")
     }
 
 }
